@@ -4,215 +4,451 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Modal Example</title>
-    <style>
-        /* Basic Page Styles */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            background-color: #f4f4f4;
-        }
-
-        h1 {
-            margin-top: 20px;
-        }
-
-        /* Video Grid */
-        .video-gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            margin: 20px;
-        }
-
-        .video-container video {
-            width: 300px;
-            height: 200px;
-            object-fit: cover;
-            cursor: pointer;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
-        }
-
-        .video-container video:hover {
-            transform: scale(1.05);
-        }
-
-        /* Modal Styles */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-
-        .modal-content {
-            position: relative;
-            width: 80%;
-            max-width: 900px;
-            background: #fff;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        .modal iframe {
-            width: 100%;
-            height: 500px;
-            border: none;
-        }
-
-        .close-btn {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            font-size: 20px;
-            color: #fff;
-            background: #333;
-            border: none;
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            text-align: center;
-            line-height: 30px;
-            cursor: pointer;
-            z-index: 10;
-        }
-    </style>
+    <title>Noah Engel - Work</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <h1>Click a Video to Open Vimeo</h1>
+    <header>
+        <h1>NOAH ENGEL</h1>
+        <nav>
+            <a href="#work">work</a>
+            <a href="#about">about</a>
+        </nav>
+    </header>
 
-    <!-- Video Thumbnails -->
-    <div class="video-gallery">
-        <div class="video-container">
-            <video class="hover-video" muted loop>
-                <source src="assets/videos/video1.mp4" type="video/mp4">
-            </video>
+    <section id="featured-work">
+        <h2>Featured Work</h2>
+        <div class="video-grid">
+            <!-- Video 1 -->
+            <div class="video-item large-video" data-video="1">
+                <video class="video" loop autoplay muted aria-label="A Culinary Adventure of Australia’s Finest Food and Wine">
+                    <source src="./assets/videos/culinary_adventure_1280.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button aria-label="Play A Culinary Adventure of Australia’s Finest Food and Wine" class="play-btn"></button>
+                <div class="video-description">A Culinary Adventure of Australia’s Finest Food and Wine</div>
+            </div>
+
+            <!-- Video 2 -->
+            <div class="video-item large-video" data-video="2">
+                <video class="video" loop autoplay muted aria-label="Finding Flavor With Shilpa Uskokovic" controls>
+                    <source src="./assets/videos/finding_flavor_1280.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button aria-label="Play Finding Flavor With Shilpa Uskokovic" class="play-btn"></button>
+                <div class="video-description">Finding Flavor With Shilpa Uskokovic</div>
+            </div>
+
+            <!-- Video 3 -->
+            <div class="video-item small-video" data-video="3">
+                <video class="video" loop autoplay muted
+                    aria-label="The Trips That Change Us | Episode One: Namibia with Lale Arikoglu" controls>
+                    <source src="./assets/videos/trips_changed_ep_1_960.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button aria-label="Play The Trips That Change Us | Episode One: Namibia with Lale Arikoglu"
+                    class="play-btn"></button>
+                <div class="video-description">The Trips That Change Us | Episode One: Namibia with Lale Arikoglu</div>
+            </div>
+
+            <!-- Video 4 -->
+            <div class="video-item small-video" data-video="4">
+                <video class="video" loop autoplay muted
+                    aria-label="The Trips That Change Us | Episode Two: Botswana with Lale Arikoglu" controls>
+                    <source src="./assets/videos/trips_changed_ep_2_960.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button aria-label="Play The Trips That Change Us | Episode Two: Botswana with Lale Arikoglu"
+                    class="play-btn"></button>
+                <div class="video-description">The Trips That Change Us | Episode Two: Botswana with Lale Arikoglu</div>
+            </div>
+
+            <!-- Video 5 -->
+            <div class="video-item small-video" data-video="5">
+                <video class="video" loop autoplay muted
+                    aria-label="The Trips That Change Us | Episode Three: Rwanda with Malavika Bhattacharya" controls>
+                    <source src="./assets/videos/trips_changed_ep_3_960.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button aria-label="Play The Trips That Change Us | Episode Three: Rwanda with Malavika Bhattacharya"
+                    class="play-btn"></button>
+                <div class="video-description">The Trips That Change Us | Episode Three: Rwanda with Malavika
+                    Bhattacharya</div>
+            </div>
+
+            <!-- Video 6 -->
+            <div class="video-item" data-video="6">
+                <video class="video" loop autoplay muted aria-label="Adidas | Honoring Black Excellence" controls>
+                    <source src="./assets/videos/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button aria-label="Play Adidas | Honoring Black Excellence" class="play-btn"></button>
+                <div class="video-description">Adidas | Honoring Black Excellence</div>
+            </div>
+
+            <!-- Video 7 -->
+            <div class="video-item" data-video="7">
+                <video class="video" loop autoplay muted aria-label="Running It Forward Teaser" controls>
+                    <source src="./assets/videos/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button aria-label="Play Running It Forward Teaser" class="play-btn"></button>
+                <div class="video-description">Running It Forward Teaser</div>
+            </div>
+
+            <!-- Video 8 -->
+            <div class="video-item" data-video="8">
+                <video class="video" loop autoplay muted aria-label="Ahead of Their Game Teaser" controls>
+                    <source src="./assets/videos/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button aria-label="Play Ahead of Their Game Teaser" class="play-btn"></button>
+                <div class="video-description">Ahead of Their Game Teaser</div>
+            </div>
+
+            <!-- Video 9 -->
+            <div class="video-item" data-video="9">
+                <video class="video" loop autoplay muted aria-label="Band Together Teaser" controls>
+                    <source src="./assets/videos/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button aria-label="Play Band Together Teaser" class="play-btn"></button>
+                <div class="video-description">Band Together Teaser</div>
+            </div>
+
+            <!-- Video 10 -->
+            <div class="video-item" data-video="10">
+                <video class="video" loop autoplay muted aria-label="Designing the Future Teaser" controls>
+                    <source src="./assets/videos/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button aria-label="Play Designing the Future Teaser" class="play-btn"></button>
+                <div class="video-description">Designing the Future Teaser</div>
+            </div>
+
+            <!-- Video 11 -->
+            <div class="video-item" data-video="11">
+                <video class="video" loop autoplay muted
+                    aria-label="How a Pro Soccer Player Inspired the Next Generation" controls>
+                    <source src="./assets/videos/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button aria-label="Play How a Pro Soccer Player Inspired the Next Generation"
+                    class="play-btn"></button>
+                <div class="video-description">How a Pro Soccer Player Inspired the Next Generation</div>
+            </div>
+
+            <!-- Video 12 -->
+            <div class="video-item" data-video="12">
+                <video class="video" loop autoplay muted aria-label="Kendall Jenner’s Drugstore Essentials" controls>
+                    <source src="./assets/videos/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button aria-label="Play Kendall Jenner’s Drugstore Essentials" class="play-btn"></button>
+                <div class="video-description">Kendall Jenner’s Drugstore Essentials</div>
+            </div>
+
+            <!-- Video 13 -->
+            <div class="video-item" data-video="13">
+                <video class="video" loop autoplay muted aria-label="Best of Brunch: What Chefs Cook at Home" controls>
+                    <source src="./assets/videos/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button aria-label="Play Best of Brunch: What Chefs Cook at Home" class="play-btn"></button>
+                <div class="video-description">Best of Brunch: What Chefs Cook at Home</div>
+            </div>
+
+            <!-- Video 14 -->
+            <div class="video-item" data-video="14">
+                <video class="video" loop autoplay muted aria-label="More Than a Ribbon | Episode One: Patient"
+                    controls>
+                    <source src="./assets/videos/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button aria-label="Play More Than a Ribbon | Episode One: Patient" class="play-btn"></button>
+                <div class="video-description">More Than a Ribbon | Episode One: Patient</div>
+            </div>
+
+            <!-- Video 15 -->
+            <div class="video-item" data-video="15">
+                <video class="video" loop autoplay muted aria-label="More Than a Ribbon | Episode Two: Doctor" controls>
+                    <source src="./assets/videos/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button aria-label="Play More Than a Ribbon | Episode Two: Doctor" class="play-btn"></button>
+                <div class="video-description">More Than a Ribbon | Episode Two: Doctor</div>
+            </div>
+
+            <!-- Video 16 -->
+            <div class="video-item" data-video="16">
+                <video class="video" loop autoplay muted aria-label="More Than a Ribbon | Episode Three: Advocate"
+                    controls>
+                    <source src="./assets/videos/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button aria-label="Play More Than a Ribbon | Episode Three: Advocate" class="play-btn"></button>
+                <div class="video-description">More Than a Ribbon | Episode Three: Advocate</div>
+            </div>
+
+            <!-- Video 17 -->
+            <div class="video-item" data-video="17">
+                <video class="video" loop autoplay muted aria-label="I Lava NYC" controls>
+                    <source src="./assets/videos/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button aria-label="Play I Lava NYC" class="play-btn"></button>
+                <div class="video-description">I Lava NYC</div>
+            </div>
+
+            <!-- Video 18 -->
+            <div class="video-item" data-video="18">
+                <video class="video" loop autoplay muted aria-label="Getting Ready With Rita Ora" controls>
+                    <source src="./assets/videos/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button aria-label="Play Getting Ready With Rita Ora" class="play-btn"></button>
+                <div class="video-description">Getting Ready With Rita Ora</div>
+            </div>
+
+            <!-- Video 19 -->
+            <div class="video-item" data-video="19">
+                <video class="video" loop autoplay muted aria-label="On the Road With AG Jeans" controls>
+                    <source src="./assets/videos/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button aria-label="Play On the Road With AG Jeans" class="play-btn"></button>
+                <div class="video-description">On the Road With AG Jeans</div>
+            </div>
+
+            <!-- Video 20 -->
+            <div class="video-item" data-video="20">
+                <video class="video" loop autoplay muted aria-label="You Have Great Skin | Arden Fanning Andrews"
+                    controls>
+                    <source src="./assets/videos/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button aria-label="Play You Have Great Skin | Arden Fanning Andrews" class="play-btn"></button>
+                <div class="video-description">You Have Great Skin | Arden Fanning Andrews</div>
+            </div>
+
+            <!-- Video 21 -->
+            <div class="video-item" data-video="21">
+                <video class="video" loop autoplay muted aria-label="You Have Great Skin | Fiona Stiles" controls>
+                    <source src="./assets/videos/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button aria-label="Play You Have Great Skin | Fiona Stiles" class="play-btn"></button>
+                <div class="video-description">You Have Great Skin | Fiona Stiles</div>
+            </div>
+
+            <!-- Video 22 -->
+            <div class="video-item" data-video="22">
+                <video class="video" loop autoplay muted aria-label="You Have Great Skin | Kiana Murden" controls>
+                    <source src="./assets/videos/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button aria-label="Play You Have Great Skin | Kiana Murden" class="play-btn"></button>
+                <div class="video-description">You Have Great Skin | Kiana Murden</div>
+            </div>
+
+            <!-- Video 23 -->
+            <div class="video-item" data-video="23">
+                <video class="video" loop autoplay muted
+                    aria-label="Olivia Rodrigo’s Guide to Effortless Skin-Care and Makeup | Beauty Secrets" controls>
+                    <source src="./assets/videos/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button aria-label="Play Olivia Rodrigo’s Guide to Effortless Skin-Care and Makeup | Beauty Secrets"
+                    class="play-btn"></button>
+                <div class="video-description">Olivia Rodrigo’s Guide to Effortless Skin-Care and Makeup | Beauty
+                    Secrets</div>
+            </div>
+
+            <!-- Video 24 -->
+            <div class="video-item" data-video="24">
+                <video class="video" loop autoplay muted aria-label="Bella Poarch Remembers Her Firsts" controls>
+                    <source src="./assets/videos/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button aria-label="Play Bella Poarch Remembers Her Firsts" class="play-btn"></button>
+                <div class="video-description">Bella Poarch Remembers Her Firsts</div>
+            </div>
+
+            <!-- Video 25 -->
+            <div class="video-item" data-video="25">
+                <video class="video" loop autoplay muted aria-label="Alicia Keys and Swizz Beatz’s Met Gala Date Night"
+                    controls>
+                    <source src="./assets/videos/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button aria-label="Play Alicia Keys and Swizz Beatz’s Met Gala Date Night" class="play-btn"></button>
+                <div class="video-description">Alicia Keys and Swizz Beatz’s Met Gala Date Night</div>
+            </div>
+
+            <!-- Video 26 -->
+            <div class="video-item" data-video="26">
+                <video class="video" loop autoplay muted aria-label="Essential Holiday Cocktails" controls>
+                    <source src="./assets/videos/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button aria-label="Play Essential Holiday Cocktails" class="play-btn"></button>
+                <div class="video-description">Essential Holiday Cocktails</div>
+            </div>
+
+            <!-- Video 27 -->
+            <div class="video-item" data-video="27">
+                <video class="video" loop autoplay muted aria-label="How to Choose a Tequila for the Holidays" controls>
+                    <source src="./assets/videos/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button aria-label="Play How to Choose a Tequila for the Holidays" class="play-btn"></button>
+                <div class="video-description">How to Choose a Tequila for the Holidays</div>
+            </div>
+
+            <!-- Video 28 -->
+            <div class="video-item" data-video="28">
+                <video class="video" loop autoplay muted aria-label="How to Get Free McDonald’s" controls>
+                    <source src="./assets/videos/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button aria-label="Play How to Get Free McDonald’s" class="play-btn"></button>
+                <div class="video-description">How to Get Free McDonald’s</div>
+            </div>
+
+            <!-- Video 29 -->
+            <div class="video-item" data-video="29">
+                <video class="video" loop autoplay muted aria-label="When Life Gives You Lemons" controls>
+                    <source src="./assets/videos/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button aria-label="Play When Life Gives You Lemons" class="play-btn"></button>
+                <div class="video-description">When Life Gives You Lemons</div>
+            </div>
+
+            <!-- Video 30 -->
+            <div class="video-item" data-video="30">
+                <video class="video" loop autoplay muted aria-label="The Lilly Capsule" controls>
+                    <source src="./assets/videos/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button aria-label="Play The Lilly Capsule" class="play-btn"></button>
+                <div class="video-description">The Lilly Capsule</div>
+            </div>
+
+            <!-- Video 31 -->
+            <div class="video-item" data-video="31">
+                <video class="video" loop autoplay muted aria-label="Welcome to My Closet | Free Assembly" controls>
+                    <source src="./assets/videos/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button aria-label="Play Welcome to My Closet | Free Assembly" class="play-btn"></button>
+                <div class="video-description">Welcome to My Closet | Free Assembly</div>
+            </div>
+
+            <!-- Video 32 -->
+            <div class="video-item" data-video="32">
+                <video class="video" loop autoplay muted aria-label="End of Summer" controls>
+                    <source src="./assets/videos/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button aria-label="Play End of Summer" class="play-btn"></button>
+                <div class="video-description">End of Summer</div>
+            </div>
+
+            <!-- Video 33 -->
+            <div class="video-item" data-video="33">
+                <video class="video" loop autoplay muted aria-label="Recipe for Success | Chris Morocco" controls>
+                    <source src="./assets/videos/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button aria-label="Play Recipe for Success | Chris Morocco" class="play-btn"></button>
+                <div class="video-description">Recipe for Success | Chris Morocco</div>
+            </div>
+
+            <!-- Video 34 -->
+            <div class="video-item" data-video="34">
+                <video class="video" loop autoplay muted aria-label="Recipes for Success | Inés Anguiano" controls>
+                    <source src="./assets/videos/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button aria-label="Play Recipes for Success | Inés Anguiano" class="play-btn"></button>
+                <div class="video-description">Recipes for Success | Inés Anguiano</div>
+            </div>
+
+            <!-- Video 35 -->
+            <div class="video-item" data-video="35">
+                <video class="video" loop autoplay muted aria-label="Recipes for Success | Shilpa Uskokovic" controls>
+                    <source src="./assets/videos/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button aria-label="Play Recipes for Success | Shilpa Uskokovic" class="play-btn"></button>
+                <div class="video-description">Recipes for Success | Shilpa Uskokovic</div>
+            </div>
+
+            <!-- Video 36 -->
+            <div class="video-item" data-video="36">
+                <video class="video" loop autoplay muted aria-label="Father’s Day Grilling With Chris Morocco" controls>
+                    <source src="./assets/videos/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button aria-label="Play Father’s Day Grilling With Chris Morocco" class="play-btn"></button>
+                <div class="video-description">Father’s Day Grilling With Chris Morocco</div>
+            </div>
+
+            <!-- Video 37 -->
+            <div class="video-item" data-video="37">
+                <video class="video" loop autoplay muted aria-label="Super Bowl | Tailgate Team Up" controls>
+                    <source src="./assets/videos/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button aria-label="Play Super Bowl | Tailgate Team Up" class="play-btn"></button>
+                <div class="video-description">Super Bowl | Tailgate Team Up</div>
+            </div>
+
+            <!-- Video 38 -->
+            <div class="video-item" data-video="38">
+                <video class="video" loop autoplay muted aria-label="Fresh Holiday Recipes: Mini Quiche" controls>
+                    <source src="./assets/videos/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button aria-label="Play Fresh Holiday Recipes: Mini Quiche" class="play-btn"></button>
+                <div class="video-description">Fresh Holiday Recipes: Mini Quiche</div>
+            </div>
+
+            <!-- Video 39 -->
+            <div class="video-item" data-video="39">
+                <video class="video" loop autoplay muted aria-label="Moments of Serenity With Janel Parrish" controls>
+                    <source src="./assets/videos/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button aria-label="Play Moments of Serenity With Janel Parrish" class="play-btn"></button>
+                <div class="video-description">Moments of Serenity With Janel Parrish</div>
+            </div>
+
+            <!-- Video 40 -->
+            <div class="video-item" data-video="40">
+                <video class="video" loop autoplay muted aria-label="Malika Haqq’s Morning Routine" controls>
+                    <source src="./assets/videos/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button aria-label="Play Malika Haqq’s Morning Routine" class="play-btn"></button>
+                <div class="video-description">Malika Haqq’s Morning Routine</div>
+            </div>
         </div>
-        <div class="video-container">
-            <video class="hover-video" muted loop>
-                <source src="assets/videos/video2.mp4" type="video/mp4">
-            </video>
-        </div>
-        <div class="video-container">
-            <video class="hover-video" muted loop>
-                <source src="assets/videos/video3.mp4" type="video/mp4">
-            </video>
-        </div>
-        <div class="video-container">
-            <video class="hover-video" muted loop>
-                <source src="assets/videos/video4.mp4" type="video/mp4">
-            </video>
-        </div>
-        <div class="video-container">
-            <video class="hover-video" muted loop>
-                <source src="assets/videos/video5.mp4" type="video/mp4">
-            </video>
-        </div>
-        <div class="video-container">
-            <video class="hover-video" muted loop>
-                <source src="assets/videos/video6.mp4" type="video/mp4">
-            </video>
-        </div>
-        <div class="video-container">
-            <video class="hover-video" muted loop>
-                <source src="assets/videos/video7.mp4" type="video/mp4">
-            </video>
-        </div>
-        <div class="video-container">
-            <video class="hover-video" muted loop>
-                <source src="assets/videos/video8.mp4" type="video/mp4">
-            </video>
-        </div>
-        <div class="video-container">
-            <video class="hover-video" muted loop>
-                <source src="assets/videos/video9.mp4" type="video/mp4">
-            </video>
-        </div>
-        <div class="video-container">
-            <video class="hover-video" muted loop>
-                <source src="assets/videos/video10.mp4" type="video/mp4">
-            </video>
-        </div>
-    </div>
+    </section>
 
     <!-- Modal -->
     <div id="video-modal" class="modal">
-        <button class="close-btn" id="close-btn">&times;</button>
         <div class="modal-content">
-            <iframe id="vimeo-iframe" src="" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            <span class="close-btn">&times;</span>
+            <div class="modal-video-container">
+                <!-- Video will be embedded here -->
+            </div>
         </div>
     </div>
 
-    <!-- JavaScript -->
-    <script>
-        // Vimeo video URLs
-        const vimeoVideos = [
-            "https://player.vimeo.com/video/840545242?h=461bad3f48&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479", // Replace with your Vimeo links
-            "https://player.vimeo.com/video/840545242?h=461bad3f48&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479", // Replace with your Vimeo links
-            "https://player.vimeo.com/video/840545242?h=461bad3f48&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479", // Replace with your Vimeo links
-            "https://player.vimeo.com/video/840545242?h=461bad3f48&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479", // Replace with your Vimeo links
-            "https://player.vimeo.com/video/840545242?h=461bad3f48&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479", // Replace with your Vimeo links
-            "https://player.vimeo.com/video/840545242?h=461bad3f48&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479", // Replace with your Vimeo links
-            "https://player.vimeo.com/video/840545242?h=461bad3f48&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479", // Replace with your Vimeo links
-            "https://player.vimeo.com/video/840545242?h=461bad3f48&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479", // Replace with your Vimeo links
-            "https://player.vimeo.com/video/840545242?h=461bad3f48&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479", // Replace with your Vimeo links
-            "https://player.vimeo.com/video/840545242?h=461bad3f48&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479", // Replace with your Vimeo links
-        ];
-
-        // Select all video elements and the modal
-        const videos = document.querySelectorAll('.hover-video');
-        const modal = document.getElementById('video-modal');
-        const vimeoIframe = document.getElementById('vimeo-iframe');
-        const closeBtn = document.getElementById('close-btn');
-
-        // Open Modal and Load Vimeo Video
-        videos.forEach((video, index) => {
-            video.addEventListener('click', () => {
-                vimeoIframe.src = vimeoVideos[index] + "?autoplay=1";
-                modal.style.display = 'flex';
-            });
-        });
-
-        // Close Modal
-        closeBtn.addEventListener('click', () => {
-            modal.style.display = 'none';
-            vimeoIframe.src = ""; // Stop the video
-        });
-
-        // Close Modal if clicking outside content
-        window.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.style.display = 'none';
-                vimeoIframe.src = ""; // Stop the video
-            }
-        });
-
-        // Loop through each video and add event listeners
-        videos.forEach(video => {
-            // Play video on hover
-            video.addEventListener('mouseenter', () => {
-                video.play();
-            });
-
-            // Pause and reset video when not hovering
-            video.addEventListener('mouseleave', () => {
-                video.pause();
-                video.currentTime = 0; // Optional: Reset video to start
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
