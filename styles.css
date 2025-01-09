@@ -55,6 +55,7 @@ nav a:hover {
 
 .video-item.two-col-video {
     grid-column: span 2; 
+    width: 90%;
 }
 
 /* Grid Layout for 3 cols */
@@ -66,6 +67,7 @@ nav a:hover {
 
 .video-item.three-col-video {
     grid-column: span 3; 
+    width: 90%;
 }
 
 /* Grid Layout for 4 cols */
@@ -76,6 +78,7 @@ nav a:hover {
 
 .video-item.four-col-video {
     grid-column: span 4; 
+    width: 90%;
 }
 
 /* Small video, always takes up 1 col */
