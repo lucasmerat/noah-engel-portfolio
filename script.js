@@ -288,12 +288,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     };
 
-    // Add event listeners to each video item
     videoItems.forEach(item => {
+        const videoId = item.dataset.video;
         const playButton = item.querySelector(".play-btn");
 
+        addDataToItem(videoId);
+
         playButton.addEventListener("click", function () {
-            const videoId = item.dataset.video;
             const videoEmbed = createVideoEmbed(videoId);
             let { title, client, type, credits } = createVideoDescriptionText(videoId);
             const titleParagraph = document.getElementById("title");
@@ -312,6 +313,14 @@ document.addEventListener("DOMContentLoaded", function () {
             creditsParagraph.innerHTML = credits;
         });
     });
+
+    function addDataToItem(videoId) {
+        const title = document.querySelector(`[data-description="${videoId}"]`);
+        const client = document.querySelector(`[data-client="${videoId}"]`);
+
+        title.innerHTML = videoDataMap[videoId].title;
+        client.innerHTML = videoDataMap[videoId].client;
+    }
 
     // Close button functionality
     closeBtn.addEventListener("click", function () {

@@ -110,6 +110,7 @@ nav a:hover {
     width: 100%;
     max-width: 100%;
     cursor: pointer;
+    margin-bottom: 20px;
 }
 
 /* Ensuring Video spans full width */
@@ -159,6 +160,12 @@ nav a:hover {
     opacity: 0;
     transition: opacity 0.3s ease;
     padding: 10px;
+}
+
+.video-client {
+    text-align: left;
+    margin-top: 0;
+    font-size: .8rem;
 }
 
 .video-item:hover .video-description {
