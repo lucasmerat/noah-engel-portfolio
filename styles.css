@@ -156,10 +156,7 @@ header h1 {
 /* Make sure description text is on top and spans full width */
 .video-description {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    bottom: 0px;
     display: flex;
     justify-content: left;
     align-items: end;
@@ -169,7 +166,6 @@ header h1 {
     transition: opacity 0.3s ease;
     padding: 10px;
     z-index: 2;
-    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .video-client {
