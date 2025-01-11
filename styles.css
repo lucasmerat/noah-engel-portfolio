@@ -17,7 +17,8 @@ header h1 {
     margin: 0;
 }
 
-.about-link, .work-link {
+.about-link,
+.work-link {
     color: black;
     margin: 0 10px;
     text-decoration: none;
@@ -59,11 +60,11 @@ header h1 {
 /* Grid Layout for 2 cols */
 
 .video-grid.two-per-row {
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .video-item.two-col-video {
-    grid-column: span 2; 
+    grid-column: span 2;
     width: 90%;
 }
 
@@ -71,22 +72,22 @@ header h1 {
 
 
 .video-grid.three-per-row {
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .video-item.three-col-video {
-    grid-column: span 3; 
+    grid-column: span 3;
     width: 90%;
 }
 
 /* Grid Layout for 4 cols */
 
 .video-grid.four-per-row {
-    grid-template-columns: repeat(4, 1fr); 
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .video-item.four-col-video {
-    grid-column: span 4; 
+    grid-column: span 4;
     width: 90%;
 }
 
@@ -99,6 +100,7 @@ header h1 {
 
 /* Media Query for Mobile - Stack all videos in 1 column */
 @media (max-width: 767px) {
+
     .video-grid.two-per-row,
     .video-grid.three-per-row,
     .video-grid.four-per-row {
@@ -109,7 +111,7 @@ header h1 {
     .video-item.single-col-video,
     .video-item.four-col-video,
     .video-item.three-col-video {
-        grid-column: span 1; 
+        grid-column: span 1;
     }
 }
 
@@ -128,7 +130,8 @@ header h1 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    pointer-events: none; /* Disable interaction with video */
+    pointer-events: none;
+    /* Disable interaction with video */
 }
 
 /* Button Styles */
@@ -137,20 +140,23 @@ header h1 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.1); /* Semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.1);
+    /* Semi-transparent background */
     color: white;
     font-size: 1.5rem;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
     z-index: 1;
-    width: 100%; 
+    width: 100%;
     height: 100%;
-    text-align: center; /* Center text inside the button */
+    text-align: center;
+    /* Center text inside the button */
 }
 
 .video-item .play-btn:hover {
-    background-color: rgba(0, 0, 0, 0.5); /* Darker background on hover */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Darker background on hover */
 }
 
 /* Make sure description text is on top and spans full width */
@@ -201,7 +207,8 @@ header h1 {
     padding: 0;
     width: 835px;
     height: 470px;
-    border-radius: 0; /* Removed rounded corners */
+    border-radius: 0;
+    /* Removed rounded corners */
 }
 
 .modal-video-container {
@@ -212,6 +219,13 @@ header h1 {
     width: 100%;
     height: 100%;
     border: none;
+}
+
+.modal-shadow {
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.5);
+    height: 126%;
+    display: flex;
+    flex-direction: column;
 }
 
 .close-btn {
@@ -228,6 +242,7 @@ header h1 {
 .description {
     padding: .4rem 1.5rem .4rem .4rem;
     max-height: 7.5rem;
+    min-height: 7rem;
     overflow-y: scroll;
     font-size: .8rem;
     background-color: rgba(0, 0, 0, 0.7);
@@ -235,11 +250,12 @@ header h1 {
     line-height: 18px;
 }
 
-.description > p {
+.description>p {
     margin: 0;
 }
 
-#title, #client {
+#title,
+#client {
     font-weight: bold;
 }
 
@@ -292,8 +308,8 @@ video::-ms-media-controls {
     justify-content: center;
     align-items: center;
 }
+
 .about-text {
     width: 50%;
     text-align: center;
 }
-
