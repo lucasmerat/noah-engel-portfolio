@@ -271,13 +271,16 @@ video::-ms-media-controls {
 
 /* Ensure the video controls are hidden */
 video {
-  pointer-events: none; /* Disable interactions */
-  -webkit-user-select: none; /* Disable text selection */
+    pointer-events: none;
+    /* Disable interactions */
+    -webkit-user-select: none;
+    /* Disable text selection */
 }
 
 /* Optional: Set the object fit for the video */
 video {
-  object-fit: cover; /* Optional */
+    object-fit: cover;
+    /* Optional */
 }
 
 
@@ -335,16 +338,23 @@ video {
 
     @media (max-width: 767px) {
         video {
-          pointer-events: none; /* Disable interaction with the video */
+            pointer-events: none;
+            /* Disable interaction with the video */
         }
+
         video::-webkit-media-controls {
-          display: none; /* Hide controls in webkit browsers (Chrome, Safari) */
+            display: none;
+            /* Hide controls in webkit browsers (Chrome, Safari) */
         }
+
         video::-moz-media-controls {
-          display: none; /* Hide controls in Firefox */
+            display: none;
+            /* Hide controls in Firefox */
         }
+
         video {
-          object-fit: cover; /* Optional: make the video fill the container */
+            object-fit: cover;
+            /* Optional: make the video fill the container */
         }
-      }
+    }
 }
