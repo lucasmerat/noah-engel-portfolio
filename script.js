@@ -1,5 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
     const videoItems = document.querySelectorAll(".video-item");
+    videoItems.forEach(video => {
+        video.play().catch(error => {
+            console.log('Autoplay failed for video:', video, error);
+        });
+    });
     const modal = document.getElementById("video-modal");
     const closeBtn = document.querySelector(".close-btn");
     const modalVideoContainer = document.querySelector(".modal-video-container");
