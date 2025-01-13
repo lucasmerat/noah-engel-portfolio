@@ -204,7 +204,7 @@ header h1 {
 }
 
 .modal-shadow {
-    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.5);
+    box-shadow: 8px 7px 0 rgba(255, 255, 255, 0.5);
     height: 126%;
     display: flex;
     flex-direction: column;
@@ -223,8 +223,7 @@ header h1 {
 
 .description {
     padding: .4rem 1.5rem .4rem .4rem;
-    max-height: 7.5rem;
-    min-height: 7rem;
+    height: 9rem;
     overflow-y: scroll;
     font-size: .8rem;
     background-color: rgba(0, 0, 0, 0.7);
