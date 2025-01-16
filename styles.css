@@ -190,7 +190,7 @@ header h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
     z-index: 9999;
@@ -198,29 +198,29 @@ header h1 {
 
 .modal-content {
     position: relative;
-    background-color: rgba(0, 0, 0, 0.746);
-    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(255 255 255 / 90%);
+    box-shadow: 8px 7px 0 #3266cb;
+    padding: 20px;
+    height: 75%;
     width: 835px;
-    height: 470px;
+    max-width: 100%;
     border-radius: 0;
-    /* Removed rounded corners */
+    text-align: center;
 }
 
 .modal-video-container {
-    height: 100%;
+    width: 100%;
+    height: 80%;
 }
 
 .modal-video-container iframe {
     width: 100%;
     height: 100%;
     border: none;
-}
-
-.modal-shadow {
-    box-shadow: 8px 7px 0 rgba(255, 255, 255, 0.5);
-    height: 126%;
-    display: flex;
-    flex-direction: column;
 }
 
 .close-btn {
@@ -236,12 +236,13 @@ header h1 {
 
 .description {
     padding: .4rem 1.5rem .4rem .4rem;
-    height: 9.5rem;
-    overflow-y: scroll;
+    margin-top: 10px;
+    overflow-y: auto;
     font-size: .8rem;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
+    color: black;
     line-height: 18px;
+    text-align: left;
+    width: 98%;
 }
 
 .description>p {
@@ -359,21 +360,21 @@ video {
     font-size: 1.3rem;
 }
 
-.email > a {
+.email>a {
     color: #3a3c66;
     text-decoration: none;
 }
 
-.email-link:hover {
+.email>a:hover {
     background-color: #d9a54a;
 }
 
-.social-links > a {
-    color:#3a3c66;
+.social-links>a {
+    color: #3a3c66;
     text-decoration: none;
 }
 
-.social-links > a:hover {
+.social-links>a:hover {
     background-color: #d9a54a;
 }
 
