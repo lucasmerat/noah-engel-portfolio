@@ -18,27 +18,25 @@ header h1 {
 }
 
 .work-divider {
-    color: #e7a324;
+    color: #3266cb;
     font-size: 1.5rem;
     margin-left: .1rem;
 }
 
 .about-link,
 .work-link {
-    color: #d9a54a;
-    margin: 0 10px;
     text-decoration: none;
-    font-weight: 500;
-    font-size: 1.4rem;
+    font-weight: 400;
+    font-size: 1.2rem;
     padding: 0 4px;
+    color: #3266cb;
+    margin: 0;
 }
 
-.about-link:hover {
-    background-color: #6584c3;
-}
-
+.about-link:hover,
 .work-link:hover {
-    background-color: #6584c3;
+    background-color: #3266cb;
+    color: white;
 }
 
 .title-image {
@@ -150,12 +148,13 @@ header h1 {
 /* Make sure description text is on top and spans full width */
 .video-description {
     font-family: "Space Grotesk", serif;
-    background-color: black;
+    background-color: rgb(255 255 255 / 95%);
+    box-shadow: 7px 7px 0px rgb(50 102 203);
     position: absolute;
     display: flex;
     justify-content: left;
     align-items: end;
-    color: white;
+    color: black;
     font-size: 2rem;
     margin: 0 15px;
     opacity: 0;
@@ -183,6 +182,18 @@ header h1 {
 
 
 /* Modal Styles - Full screen modal with no rounded corners */
+
+@keyframes modalOpening {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
 .modal {
     display: none;
     position: fixed;
@@ -194,6 +205,7 @@ header h1 {
     justify-content: center;
     align-items: center;
     z-index: 9999;
+    animation: modalOpening 0.2s ease-in-out;
 }
 
 .modal-content {
@@ -327,7 +339,7 @@ video {
 }
 
 .dog-image {
-    margin-right: 15px;
+    margin-right: 35px;
     height: 157px;
     width: 30%;
 }
@@ -343,7 +355,7 @@ video {
 }
 
 .about-page-container {
-    color: #3a3c66;
+    color: #3266cb;
 }
 
 .headline {
@@ -361,28 +373,30 @@ video {
 }
 
 .email>a {
-    color: #3a3c66;
+    color: #3266cb;
     text-decoration: none;
 }
 
 .email>a:hover {
-    background-color: #d9a54a;
+    background-color: #3266cb;
+    color: #f4f4f4;
 }
 
 .social-links>a {
-    color: #3a3c66;
+    color: #3266cb;
     text-decoration: none;
 }
 
 .social-links>a:hover {
-    background-color: #d9a54a;
+    background-color: #3266cb;
+    color: #f4f4f4;
 }
 
 footer {
     width: 100%;
     text-align: center;
     margin: 50px 0;
-    color: #e7a324;
+    color: #3266cb;
     font-size: .8rem;
 }
 
