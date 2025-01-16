@@ -1,7 +1,7 @@
 /* General Body Styles */
 body {
-    font-family: "Roboto Condensed", serif;
-    margin: 0;
+    font-family: "Space Grotesk", serif;
+    margin: 0 20px;
     padding: 0;
     background-color: #f4f4f4;
 }
@@ -17,13 +17,19 @@ header h1 {
     margin: 0;
 }
 
+.work-divider {
+    color: #e7a324;
+    font-size: 1.5rem;
+    margin-left: .1rem;
+}
+
 .about-link,
 .work-link {
-    color: black;
+    color: #d9a54a;
     margin: 0 10px;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 1.2rem;
+    font-weight: 500;
+    font-size: 1.4rem;
     padding: 0 4px;
 }
 
@@ -65,7 +71,6 @@ header h1 {
 
 .video-item.two-col-video {
     grid-column: span 2;
-    width: 90%;
 }
 
 /* Grid Layout for 3 cols */
@@ -77,7 +82,6 @@ header h1 {
 
 .video-item.three-col-video {
     grid-column: span 3;
-    width: 90%;
 }
 
 /* Grid Layout for 4 cols */
@@ -88,14 +92,12 @@ header h1 {
 
 .video-item.four-col-video {
     grid-column: span 4;
-    width: 90%;
 }
 
 /* Small video, always takes up 1 col */
 
 .video-item.single-col-video {
     grid-column: span 1;
-    width: 90%;
 }
 
 /* Video Item Styles */
@@ -117,13 +119,19 @@ header h1 {
 }
 
 /* Button Styles */
+
+.play-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .video-item .play-btn {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.1);
-    /* Semi-transparent background */
     color: white;
     font-size: 1.5rem;
     padding: 10px 20px;
@@ -133,23 +141,22 @@ header h1 {
     width: 100%;
     height: 100%;
     text-align: center;
-    /* Center text inside the button */
 }
 
 .video-item .play-btn:hover {
-    background-color: rgba(0, 0, 0, 0.5);
-    /* Darker background on hover */
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 /* Make sure description text is on top and spans full width */
 .video-description {
+    font-family: "Space Grotesk", serif;
+    background-color: black;
     position: absolute;
-    bottom: 0px;
     display: flex;
     justify-content: left;
     align-items: end;
     color: white;
-    font-size: 1.5rem;
+    font-size: 2rem;
     opacity: 0;
     transition: opacity 0.3s ease;
     padding: 10px;
@@ -160,7 +167,8 @@ header h1 {
     text-align: left;
     margin-top: 0;
     font-size: .8rem;
-    color: #504f4f;
+    font-weight: 500;
+    color: #706f6f;
     padding-left: 10px;
 }
 
@@ -309,9 +317,20 @@ video {
     text-align: center;
 }
 
+footer {
+    width: 100%;
+    text-align: center;
+    margin: 50px 0;
+    color: #706f6f;
+}
+
 
 /* Media Query for Mobile - Stack all videos in 1 column */
 @media (max-width: 767px) {
+
+    .body {
+        margin: 0;
+    }
 
     .video-grid.two-per-row,
     .video-grid.three-per-row,
