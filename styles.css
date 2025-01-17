@@ -404,7 +404,7 @@ footer {
 /* Media Query for Mobile - Stack all videos in 1 column */
 @media (max-width: 767px) {
 
-    .body {
+    body {
         margin: 0;
     }
 
@@ -418,16 +418,30 @@ footer {
     .video-item.single-col-video,
     .video-item.four-col-video,
     .video-item.three-col-video {
-        grid-column: span 1;
+        grid-column: span 2;
+    }
+
+    .video-item:hover .video-description {
+        opacity: 0;
     }
 
     .video-description {
         opacity: 0;
     }
 
+    .modal-video-container {
+        height: 60%;
+    }
+
     .modal-content {
-        width: 275px;
-        height: 120px;
+        padding: 0 15px;
+        width: 300px;
+        height: 70%
+    }
+
+    .description {
+        padding: 0 10px;
+        height: 40%;
     }
 
     @media (max-width: 767px) {
