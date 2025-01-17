@@ -408,8 +408,18 @@ footer {
         margin: 0;
     }
 
-    .video-grid {
-        margin-top: 0px;
+    .about-link,
+    .work-link,
+    .work-divider {
+        font-size: 1rem;
+    }
+
+    .title-image {
+        width: 70%;
+    }
+
+    .video-client {
+        font-size: .7rem;
     }
 
     .video-grid.two-per-row,
