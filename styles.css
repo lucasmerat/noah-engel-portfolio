@@ -444,25 +444,42 @@ footer {
         height: 40%;
     }
 
-    @media (max-width: 767px) {
-        video {
-            pointer-events: none;
-            /* Disable interaction with the video */
-        }
+    video {
+        pointer-events: none;
+        /* Disable interaction with the video */
+    }
 
-        video::-webkit-media-controls {
-            display: none;
-            /* Hide controls in webkit browsers (Chrome, Safari) */
-        }
+    video::-webkit-media-controls {
+        display: none;
+        /* Hide controls in webkit browsers (Chrome, Safari) */
+    }
 
-        video::-moz-media-controls {
-            display: none;
-            /* Hide controls in Firefox */
-        }
+    video::-moz-media-controls {
+        display: none;
+        /* Hide controls in Firefox */
+    }
 
-        video {
-            object-fit: cover;
-            /* Optional: make the video fill the container */
-        }
+    video {
+        object-fit: cover;
+        /* Optional: make the video fill the container */
+
+    }
+
+    .bw-image,
+    .dog-image {
+        display: none;
+    }
+
+    .about-page-container {
+        margin: 0 20px;
+    }
+
+    .bottom-section-container {
+        flex-flow: column-reverse;
+    }
+
+    .headshot {
+        width: 80%;
+        margin: 0;
     }
 }
