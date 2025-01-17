@@ -408,6 +408,10 @@ footer {
         margin: 0;
     }
 
+    .video-grid {
+        margin-top: 0px;
+    }
+
     .video-grid.two-per-row,
     .video-grid.three-per-row,
     .video-grid.four-per-row {
