@@ -216,7 +216,7 @@ header h1 {
     align-items: center;
     background-color: rgb(255 255 255 / 90%);
     box-shadow: 8px 7px 0 #3266cb;
-    padding: 20px;
+    padding: 45px;
     height: 75%;
     width: 835px;
     max-width: 100%;
@@ -247,7 +247,8 @@ header h1 {
 }
 
 .description {
-    padding: .4rem 1.5rem .4rem .4rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
     margin-top: 10px;
     overflow-y: auto;
     font-size: .8rem;
@@ -406,6 +407,10 @@ footer {
 
     body {
         margin: 0;
+    }
+
+    header {
+        padding-bottom: 0;
     }
 
     .about-link,
