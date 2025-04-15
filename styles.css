@@ -321,7 +321,7 @@ video {
 
 .headshot {
     margin-left: 35px;
-    width: 30%;
+    width: 50%;
 }
 
 .top-section-container {
@@ -341,14 +341,14 @@ video {
 
 .dog-image {
     margin-right: 35px;
-    height: 157px;
-    width: 30%;
+    height: 200px;
+    width: 40%;
 }
 
 .bw-image {
     margin-right: 15px;
     height: 157px;
-    width: 30%;
+    width: 40%;
 }
 
 .about-text {
@@ -398,7 +398,7 @@ footer {
     text-align: center;
     margin: 50px 0;
     color: #3266cb;
-    font-size: .8rem;
+    font-size: .5rem;
 }
 
 
